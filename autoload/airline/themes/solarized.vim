@@ -42,7 +42,7 @@ function! airline#themes#solarized#refresh()
     let s:base0   = {'t': s:ansi_colors ?  12 : (s:tty ? '7' : 244), 'g': '#839496'}
     let s:base1   = {'t': s:ansi_colors ?  14 : (s:tty ? '7' : 245), 'g': '#93a1a1'}
     let s:base2   = {'t': s:ansi_colors ?   7 : (s:tty ? '7' : 254), 'g': '#eee8d5'}
-    let s:base3   = {'t': s:ansi_colors ?  15 : (s:tty ? '7' : 230), 'g': '#fdf6e3'}
+    let s:base3   = {'t': s:ansi_colors ?  15 : (s:tty ? '7' : 255), 'g': '#fdf6e3'}
     let s:yellow  = {'t': s:ansi_colors ?   3 : (s:tty ? '3' : 136), 'g': '#b58900'}
     let s:orange  = {'t': s:ansi_colors ?   9 : (s:tty ? '1' : 166), 'g': '#cb4b16'}
     let s:red     = {'t': s:ansi_colors ?   1 : (s:tty ? '1' : 160), 'g': '#dc322f'}
@@ -60,11 +60,11 @@ function! airline#themes#solarized#refresh()
   """"""""""""""""""""""""""""""""""""""""""""""""
   " Normal mode
   if s:background == 'dark'
-    let s:N1 = [s:base3, (s:use_green ? s:green : s:base00), 'bold']
+    let s:N1 = [s:base3, (s:use_green ? s:green : s:base00), '']
     let s:N2 = [s:base2, (s:tty ? s:base01 : s:base00), '']
     let s:N3 = [s:base01, s:base02, '']
   else
-    let s:N1 = [s:base2, (s:use_green ? s:green : s:base00), 'bold']
+    let s:N1 = [s:base2, (s:use_green ? s:green : s:base00), '']
     let s:N2 = [(s:tty ? s:base01 : s:base2), s:base1, '']
     let s:N3 = [s:base1, s:base2, '']
   endif
